@@ -1,0 +1,10 @@
+package com.exp;
+
+
+
+public class KruskalMST {
+
+	public static void main(String[] args) {
+		Graph<Integer> graph = new Graph<Integer>(false);
+	}
+}

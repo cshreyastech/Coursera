@@ -1,0 +1,21 @@
+INDEX VERSION 1.127+/home/cs/cs-files/Codes/Java/Coursera/course2/.metadata/.plugins/org.eclipse.jdt.core
+1544860896.index
+1646852840.index
+2697104099.index
+2745541299.index
+2869054228.index
+3557230741.index
+55649219.index
+1433645891.index
+958083428.index
+21429504.index
+584011970.index
+1331795120.index
+2549873569.index
+1643714929.index
+3859790665.index
+4261406296.index
+3094270088.index
+4004831339.index
+4172391172.index
+2401283352.index

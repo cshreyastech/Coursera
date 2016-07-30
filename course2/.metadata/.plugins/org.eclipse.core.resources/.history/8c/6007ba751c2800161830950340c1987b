@@ -1,0 +1,26 @@
+package roadgraph;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+
+public class DisjointSet {
+
+	private Map<MapNode, Node> map = new HashMap<>();
+
+	class Node {
+		MapNode mapNode;
+		Node parent;
+		int rank;
+	}
+	
+	// set with single node
+	public void makeSet(MapNode mapNode) {
+		Node node = new Node();
+		node.mapNode = mapNode;
+		node.parent = node;
+		node.rank = 0;
+		map.put(mapNode, node);
+	}
+}

@@ -1,0 +1,57 @@
+package roadgraph;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+
+import geography.GeographicPoint;
+
+public class MapNode {
+	private GeographicPoint location;
+	private List<MapNode> neighbours;
+
+	public MapNode(GeographicPoint location) {
+		this.location = location;
+		neighbours = new LinkedList<MapNode>();
+	}
+	
+	public GeographicPoint getLocation() {
+		return location;
+	}
+
+	public void setLocation(GeographicPoint location) {
+		this.location = location;
+	}
+
+//	public void addNeighbor(MapEdge edge) {
+//		neighbours.add(edge);
+//	}
+//	
+//	
+	public List<MapNode> getNeighbors(Set<MapEdge> edges, MapNode mapNode) {
+//		Set<MapNode> neighbors = new HashSet<MapNode>();
+//		System.out.println("neighbours.size(): - MapNode: " + neighbours.size());
+		System.out.println("mapNode.getLocation(): " + mapNode.getLocation());
+		for(MapEdge edge : edges) {
+			System.out.println("edge.getStart().getLocation(): " + edge.getStart().getLocation());
+			MapNode temp = edge.getStart(); 
+//			if(( temp.getLocation() == mapNode.getLocation()) && (!neighbours.contains(temp))) {
+			if(temp.getLocation().equals(mapNode.getLocation()) && (!neighbours.contains(temp))) {
+				System.out.println("MapNode - Inside Start if");
+				neighbours.add(edge.getEnd());
+			}
+			temp = edge.getEnd(); 
+			if((temp.getLocation() == mapNode.getLocation()) && (!neighbours.contains(temp))) {
+				System.out.println("MapNode - Inside End if");
+				neighbours.add(edge.getStart());
+			}
+		}
+		return neighbours;
+	}
+
+
+	
+//	public void addNeighbors(MapEdge neighbor) {
+//		edges.add(neighbor);
+//	}
+}

@@ -1,0 +1,8 @@
+package lifeexpectencypackage;
+
+import processing.core.PApplet;
+import de.fhpotsdam.unfolding;
+
+public class LifeExpectency extends PApplet {
+	UnfoldingMap map;
+}

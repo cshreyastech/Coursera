@@ -1,0 +1,45 @@
+package roadgraph;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import geography.GeographicPoint;
+
+public class MapNode {
+	private GeographicPoint location;
+	private HashSet<MapEdge> neighbours;
+
+	public MapNode(GeographicPoint location) {
+		this.location = location;
+		neighbours = new HashSet<MapEdge>();
+	}
+	
+	public GeographicPoint getLocation() {
+		return location;
+	}
+
+	public void setLocation(GeographicPoint location) {
+		this.location = location;
+	}
+
+	public void addEdge(MapEdge edge) {
+		neighbours.add(edge);
+	}
+	
+	
+	public Set<MapNode> getNeighbors() {
+		Set<MapNode> neighbors = new HashSet<MapNode>();
+		System.out.println("neighbours.size(): - MapNode: " + neighbours.size());
+		for(MapEdge edge : neighbours) {
+			
+			neighbors.add(edge.getOtherSide(this));
+		}
+		return neighbors;
+	}
+
+
+	
+//	public void addNeighbors(MapEdge neighbor) {
+//		edges.add(neighbor);
+//	}
+}

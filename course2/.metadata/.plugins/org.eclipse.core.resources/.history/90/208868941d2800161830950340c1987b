@@ -1,0 +1,40 @@
+package roadgraph;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import geography.GeographicPoint;
+
+
+
+public class DisjointSet {
+
+	private Map<GeographicPoint, Node> map = new HashMap<>();
+
+	class Node {
+		GeographicPoint location;
+		Node parent;
+		int rank;
+	}
+	
+	// set with single node
+	public void makeSet(GeographicPoint location) {
+		Node node = new Node();
+		node.location = location;
+		node.parent = node;
+		node.rank = 0;
+		map.put(location, node);
+	}
+	
+	/**
+	 * Combines two sets together
+	 * 
+	 * @return true if location1 and location2 were in different sets before union else
+	 *         false
+	 */
+	public boolean union(GeographicPoint location1, GeographicPoint location2) {
+
+		return true;
+	}
+	
+}

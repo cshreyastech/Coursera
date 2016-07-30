@@ -1,0 +1,7 @@
+package lifeexpectencypackage;
+
+import processing.core.PApplet;
+
+public class LifeExpectency extends PApplet {
+	UnfoldingMap map;
+}
